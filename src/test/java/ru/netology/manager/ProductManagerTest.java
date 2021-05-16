@@ -55,4 +55,10 @@ class ProductManagerTest {
         Product[] actual = manager.searchBy("2.2");
         assertArrayEquals(expected, actual);
     }
+    @Test
+    public void shouldNotFind() {
+        Product[] expected = new Product[0];
+        Product[] actual = manager.searchBy("Do not worry");
+        assertArrayEquals(expected, actual);
+    }
 }
